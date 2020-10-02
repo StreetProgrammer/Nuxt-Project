@@ -19,9 +19,20 @@
           <NuxtLink class="nav-item nav-link active" to="/about"
             >About</NuxtLink
           >
-          <NuxtLink class="nav-item nav-link active" to="/auth/login"
-            >login</NuxtLink
+          <NuxtLink
+            v-if="!$auth.loggedIn"
+            class="nav-item nav-link active"
+            to="/auth/login"
           >
+            login
+          </NuxtLink>
+          <button
+            v-else
+            class="btn btn-primary"
+            @click="() => $auth.logout('local')"
+          >
+            Logout
+          </button>
         </div>
       </div>
     </nav>

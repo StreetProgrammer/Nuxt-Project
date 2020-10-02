@@ -32,8 +32,11 @@
           <font-awesome-icon icon="circle-notch" class="fa-spin" />
         </span>
       </button>
-      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+      <p class="mt-5 mb-3 text-muted">
+        © 2017-2018
+      </p>
     </form>
+    <button class="btn btn-primary" @click="getUsers">get users</button>
   </div>
 </template>
 
@@ -47,7 +50,8 @@ export default {
         password: ""
       },
       loginErrors: null,
-      loginLoading: false
+      loginLoading: false,
+      users: null
     };
   },
   methods: {
@@ -60,23 +64,24 @@ export default {
         });
         this.loginLoading = false;
         // this.prepareRedirectAfterLogin();
+        // this.$auth.setUser(user)
         console.log(this.$auth.user);
       } catch (e) {
         this.loginLoading = false;
         this.loginErrors = e;
       }
+    },
+    getUsers() {
+      console.log("clicked");
+      this.$axios
+        .$get("admin/users")
+        .then(res => {
+          console.log(res);
+        })
+        .catch(e => {
+          console.log(e);
+        });
     }
-    // prepareRedirectAfterLogin() {
-    //   const user = this.$auth.user;
-    //   const router = this.$router;
-    //   if (user.email_verified_at == null) {
-    //     console.log("go to verify email");
-    //     router.push("/register/step3");
-    //   } else {
-    //     console.log("go to check other things");
-    //     router.push("/dashboard");
-    //   }
-    // }
   }
 };
 </script>
