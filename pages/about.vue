@@ -8,3 +8,16 @@
 <script>
 export default {};
 </script>
+
+<style lang="scss">
+h1 {
+  color: #ddd;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+</style>

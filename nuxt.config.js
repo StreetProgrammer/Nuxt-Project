@@ -23,19 +23,35 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/css/bootstrap.min.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@plugins/vuetify'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
+    ['nuxt-fontawesome', {
+      imports: [
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['fas', 'faProjectDiagram', 'faChartBar', 'faUnlockAlt',
+            'faGift', 'faGlobe', 'faAngleLeft', 'faAngleRight',
+            'faAngleDoubleLeft', 'faAngleDoubleRight', 'faTrash',
+            'faDotCircle', 'faAngleDoubleDown', 'faTh', 'faHeart',
+            'faEye', 'faStar', 'faAngleDown', 'faBell', 'faComment']
+        },
+      ]
+    }]
   ],
+  axios: {
+    baseURL: 'https://api.letasknoelayha.com/api/'
+  },
   /*
   ** Build configuration
   */
@@ -45,5 +61,32 @@ export default {
     */
     extend(config, ctx) {
     }
-  }
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'admin/auth/login', method: 'post' },
+          logout: false,
+          user: { url: 'admin/auth/me', method: 'post' }
+        },
+        user: {
+          property: false,
+          // autoFetch: true
+        },
+        token: {
+          property: 'access_token',
+          // required: true,
+          type: 'Bearer'
+        },
+      }
+    },
+    // redirect: false
+    redirect: {
+      login: false,
+      logout: '/',
+      callback: '/auth/login',
+      home: false
+    }
+  },
 }
