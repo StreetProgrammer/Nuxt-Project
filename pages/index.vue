@@ -40,7 +40,7 @@ export default {
   padding-top: 0;
 }
 .wrapper {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   overflow: hidden;
   background: #24c6dc;

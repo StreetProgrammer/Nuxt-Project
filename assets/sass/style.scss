@@ -1,79 +1,74 @@
+// @import 'fonts';
+@import "varriable";
+@import "mixins";
+// @import 'extend';
+@import "responsive";
+// @import 'theme-default';
+// @import 'btn';
+// @import 'section_title';
+// @import 'slick-nav';
+// @import 'tag-input';
+// @import 'modal';
 
-@import 'fonts';
-@import 'varriable';
-@import 'mixins';
-@import 'extend';
-@import 'responsive';
-@import 'theme-default';
-@import 'btn';
-@import 'section_title';
-@import 'slick-nav';
-@import 'tag-input';
-@import 'modal';
+// /* header */
+@import "header";
 
-/* header */
-@import 'header';
+// /* search */
+// @import 'search';
 
-/* search */
-@import 'search';
+// /* slider */
+// @import 'slider';
 
-/* slider */
-@import 'slider';
+// /* brand */
+// @import 'brand';
 
-/* brand */
-@import 'brand';
+// /* service */
+// @import 'dashboard';
 
-/* service */
-@import 'dashboard';
+// /* project */
+// @import 'project';
 
-/* project */
-@import 'project';
+// /* location */
+// @import 'location';
 
-/* location */
-@import 'location';
+// /* components styles */
+// @import 'components';
 
-/* components styles */
-@import 'components';
+// /* login */
+// @import 'login';
 
-/* login */
-@import 'login';
+// /* register */
+// @import 'register';
 
-/* register */
-@import 'register';
+// /* about */
+// @import 'about';
 
-/* about */
-@import 'about';
+// /* cta */
+// @import 'cta';
 
-/* cta */
-@import 'cta';
+// /* contact */
+// @import 'contact';
 
-/* contact */
-@import 'contact';
+// /* footer */
+@import "footer";
 
-/* footer */
-@import 'footer';
+// /* banner */
+// @import 'banner';
 
+// /* team */
+// @import 'team';
 
-/* banner */
-@import 'banner';
+// /* accordian */
+// @import 'accordion';
 
-/* team */
-@import 'team';
+// /* elements */
+// @import 'elements.scss';
 
-/* accordian */
-@import 'accordion';
+// /* blog */
+// @import 'blog';
 
-/* elements */
-@import 'elements.scss';
+// /* blog part */
+// @import 'blog_part';
 
-/* blog */
-@import 'blog';
-
-
-/* blog part */
-@import 'blog_part';
-
-
-/* freelancer => edit => about */
-@import 'freelancer-edit'
-
+// /* freelancer => edit => about */
+// @import 'freelancer-edit'

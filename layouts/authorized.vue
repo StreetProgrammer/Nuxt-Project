@@ -165,7 +165,7 @@
       <div class="header-area ">
         <div id="sticky-header" class="main-header-area gray-bg">
           <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center space-betwn">
               <div class="col-xl-2 col-lg-2">
                 <div class="logo-img">
                   <nuxt-link to="/">
@@ -173,28 +173,6 @@
                       ><img src="@/assets/imgs/logo.png" alt=""
                     /></client-only>
                   </nuxt-link>
-                </div>
-              </div>
-
-              <div class="col-xl-7 col-lg-7 .d-none .d-lg-block .d-xl-none">
-                <div class="search_input d-none d-lg-block">
-                  <div class="container ">
-                    <form class="d-flex justify-content-between search-inner">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="search_input"
-                        :placeholder="
-                          $auth.user.kind == 1
-                            ? 'ابحث عن مستقلين'
-                            : 'ابحث عن وظائف'
-                        "
-                      />
-                      <button type="submit" class="btn">
-                        <font-awesome-icon icon="search" />
-                      </button>
-                    </form>
-                  </div>
                 </div>
               </div>
 
@@ -265,51 +243,6 @@
                   <div class="slicknav_menu">
                     <burger />
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="header-top gray-bg d-none d-lg-block">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <div class="header-top-menu">
-                  <nav>
-                    <ul>
-                      <li>
-                        <nuxt-link to="/dashboard">
-                          لوحة التحكم
-                        </nuxt-link>
-                      </li>
-                      <li>
-                        <nuxt-link to="#">
-                          ابحث عن عمل
-                        </nuxt-link>
-                      </li>
-                      <li>
-                        <nuxt-link to="#">
-                          وظائفي
-                        </nuxt-link>
-                      </li>
-                      <li>
-                        <nuxt-link to="#">
-                          المستقلين
-                        </nuxt-link>
-                      </li>
-                      <li>
-                        <nuxt-link to="#">
-                          إدارة الرصيد
-                        </nuxt-link>
-                      </li>
-                      <li>
-                        <nuxt-link to="#">
-                          التسويق بالعموله
-                        </nuxt-link>
-                      </li>
-                    </ul>
-                  </nav>
                 </div>
               </div>
             </div>
@@ -529,4 +462,8 @@ export default {
 <style lang="scss">
 @import "~/assets/sass/fonts.scss";
 @import "~/assets/sass/style.scss";
+
+.space-betwn {
+  justify-content: space-between;
+}
 </style>
