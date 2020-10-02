@@ -36,9 +36,7 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
-      <nuxt />
-    </div>
+    <nuxt />
   </div>
 </template>
 
