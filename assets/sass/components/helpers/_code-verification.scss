@@ -1,0 +1,23 @@
+#code-verification-form {
+    margin: 25px auto 0;
+    input {
+        margin: 0 5px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 50px;
+        border: solid px #ccc;
+        border-bottom: solid 2px #ccc;
+        outline: none;
+        width: 12%;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        border-radius: 3px;
+        color: #6c6c6c
+    }
+    input:focus {
+        border-color: $theme-color2;
+    }
+    input::selection {
+        background: transparent;
+    }
+}

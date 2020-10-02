@@ -1,0 +1,26 @@
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: local("NotoKufiArabic"), local("NotoKufiArabic"),
+    url($font_path+"NotoKufiArabic-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+}
+
+
+// .fs-10-px{
+//   font-size: 10px !important;
+// }
+
+// .fs-12-px{
+//   font-size: 10px !important;
+// }
+
+// .fs-14-px{
+//   font-size: 10px !important;
+// }
+
+// .fs-16-px{
+//   font-size: 10px !important;
+// }
