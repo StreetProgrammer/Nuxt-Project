@@ -24,11 +24,14 @@ export default {
   */
   css: [
     '@/assets/css/bootstrap.min.css',
+    '@/assets/css/style.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
+  // components: true,
   plugins: [
+    { src: '~/plugins/fragment.js' }
   ],
   /*
   ** Nuxt.js modules
@@ -44,7 +47,9 @@ export default {
             'faGift', 'faGlobe', 'faAngleLeft', 'faAngleRight',
             'faAngleDoubleLeft', 'faAngleDoubleRight', 'faTrash',
             'faDotCircle', 'faAngleDoubleDown', 'faTh', 'faHeart',
-            'faEye', 'faStar', 'faAngleDown', 'faBell', 'faComment']
+            'faEye', 'faStar', 'faAngleDown', 'faBell', 'faComment',
+            'faBars'
+          ]
         },
       ]
     }]
